@@ -80,6 +80,7 @@ class Student
     SELECT * FROM students WHERE students.grade = 10 LIMIT ?
     SQL
     array = DB[:conn].execute(sql, x)
+    array
   end
 
   def self.first_student_in_grade_10
