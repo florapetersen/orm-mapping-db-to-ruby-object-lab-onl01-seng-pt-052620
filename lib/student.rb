@@ -14,9 +14,9 @@ class Student
     sql = <<-SQL
       SELECT * FROM Students
     SQL
-    DB[:conn].execute(sql).map do |row| 
-      self.new_from_db(row) 
-    end 
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
+    end
   end
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
